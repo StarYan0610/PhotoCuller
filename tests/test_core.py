@@ -270,4 +270,4 @@ if __name__ == "__main__":
         test_scan_reads_metadata(tmp)
         test_filters(tmp)
         test_mark_siblings_safe(tmp)
-    print("\n全部测试通过 ✓")
+    print("\n全部测试通过 [PASS]")
