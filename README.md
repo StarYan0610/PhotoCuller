@@ -44,3 +44,12 @@ py -3.13 -m venv .venv
 ```
 
 核心测试只创建临时样本，不读取真实照片。打包产物在 `dist/PhotoCuller/`，分发时需保留整个目录。
+
+## 维护文档
+
+- [架构与代码导航](docs/architecture.md)
+- [数据安全与回收记录](docs/data-safety.md)
+- [快捷键](docs/shortcuts.md)
+- [开发与发布](CONTRIBUTING.md)
+
+仓库不包含个人照片、回收站内容、用户配置或已打包的第三方运行库。
