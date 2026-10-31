@@ -33,3 +33,14 @@ py -3.13 -m venv .venv
 ```
 
 没有 `py` 启动器时，用已安装 Python 的绝对路径创建虚拟环境。无需修改 PowerShell 执行策略。
+
+## 检查与打包
+
+```powershell
+.\.venv\Scripts\python.exe tests/test_core.py
+.\.venv\Scripts\python.exe -m unittest discover -s tests -p test_config.py
+.\.venv\Scripts\python.exe -m pip install -e ".[dev]"
+.\build_exe.ps1
+```
+
+核心测试只创建临时样本，不读取真实照片。打包产物在 `dist/PhotoCuller/`，分发时需保留整个目录。
