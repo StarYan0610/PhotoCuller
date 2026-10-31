@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "photoculler"
+version = "1.0.0"
+description = "Local JPG and RAW photo review with recoverable file operations"
+requires-python = ">=3.13"
+dependencies = ["PySide6-Essentials>=6.8,<7", "Pillow>=11,<13"]
+
+[project.optional-dependencies]
+dev = ["pyinstaller>=6.11,<7"]
+
+[project.gui-scripts]
+photoculler = "main:main"
+
+[tool.setuptools]
+py-modules = ["main"]
+
+[tool.setuptools.packages.find]
+include = ["photo_culler*"]
