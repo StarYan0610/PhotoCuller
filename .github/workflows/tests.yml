@@ -5,6 +5,8 @@ on:
   pull_request:
 permissions:
   contents: read
+env:
+  PYTHONUTF8: '1'
 jobs:
   test:
     runs-on: windows-latest
