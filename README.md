@@ -21,3 +21,15 @@ Python · PySide6 · Pillow · 本地文件处理
 
 默认回收目录为 `桌面/PhotoCuller/回收站`。配置保存在 `%APPDATA%/PhotoCuller/config.json`。
 首次使用请先用照片副本验证流程；CRC32 校验不替代独立备份。
+
+## 从源码运行
+
+需要 Windows、Python 3.13+。在仓库根目录执行：
+
+```powershell
+py -3.13 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -e .
+.\.venv\Scripts\python.exe main.py
+```
+
+没有 `py` 启动器时，用已安装 Python 的绝对路径创建虚拟环境。无需修改 PowerShell 执行策略。

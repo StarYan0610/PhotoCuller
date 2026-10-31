@@ -42,6 +42,8 @@ class Config:
             try:
                 with open(p, "r", encoding="utf-8") as f:
                     stored = json.load(f)
+                if not isinstance(stored, dict):
+                    return
                 for k, v in stored.items():
                     if k in self._data:
                         self._data[k] = v
